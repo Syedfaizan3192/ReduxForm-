@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SimpleForm from "./components/simpleform";
+import store from "./reducers";
+import ShowResults from './components/showresult'
+import { formValues } from 'redux-form';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: 15 }} className='ui inverted segment container'>
+      <h2>SYNC-FORM</h2>
+      <SimpleForm onSubmit={ShowResults} />
+      <formValues form="SyncValidationForm" />
     </div>
-  );
+  )
 }
-
 export default App;

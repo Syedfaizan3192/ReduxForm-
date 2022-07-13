@@ -1,0 +1,13 @@
+.error {
+    color: red;
+}
+
+.btn {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image_side {
+    width: 100%;
+    height: auto;
+}
